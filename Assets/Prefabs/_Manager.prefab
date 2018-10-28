@@ -57,5 +57,6 @@ MonoBehaviour:
   _barelyOpenEye: {fileID: 21300000, guid: acaf418ff7d15b34f952375df4ec6934, type: 3}
   _slightlyOpenEye: {fileID: 21300000, guid: e4ab82ff6805eba418585b870675002a, type: 3}
   _openEye: {fileID: 21300000, guid: cadb0e321b7dbf646ab68852b2260aad, type: 3}
+  _eye: {fileID: 6560593421814141065, guid: db4beddb6918f384987451a185a897ed, type: 3}
   _thirdEyeOpen: {fileID: 21300000, guid: 41e6e6419b94db44b93e246100d3e97e, type: 3}
   _PC_Materal: {fileID: 2100000, guid: ca463525c2c96fb418b0ad51b03aebc5, type: 2}

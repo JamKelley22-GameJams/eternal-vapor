@@ -100,6 +100,7 @@ public class Manager : MonoBehaviour
             yield return null;
         }
         go.transform.position = startPosition;
+        go.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         PC_Materal.SetFloat("___AlpahClip___", 0f);
     }
 

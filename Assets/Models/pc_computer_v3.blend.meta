@@ -80,6 +80,7 @@ ModelImporter:
     7400004: _Idle
     7400006: _Idle_1
     7400008: _Jump
+    7400010: _WallJump
     9500000: //RootNode
     13700000: Cube_000
     2186277476908879412: ImportLogs

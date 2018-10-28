@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 932527098708526966}
   m_Layer: 0
   m_Name: VaporGrenade
-  m_TagString: Grenade
+  m_TagString: VaporTeleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b88c86fac843a43acf0bfbc3d40ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collideSound: {fileID: 8300000, guid: 17c7e651fec09994a8f036abfc653ce1, type: 3}
 --- !u!61 &932527098708526966
 BoxCollider2D:
   m_ObjectHideFlags: 0

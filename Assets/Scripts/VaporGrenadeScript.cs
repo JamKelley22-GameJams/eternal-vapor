@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VaporGrenadeScript : MonoBehaviour
 {
+    public AudioClip collideSound;
     private Collider2D collider;
     private Rigidbody2D rb2d;
 
@@ -25,6 +26,7 @@ public class VaporGrenadeScript : MonoBehaviour
         GameObject[] playerArr = GameObject.FindGameObjectsWithTag("Player");
         if (playerArr.Length == 1)
         {
+            AudioSource.PlayClipAtPoint(collideSound, this.transform.position);
             playerArr[0].gameObject.transform.position = this.transform.position;
         }
         Destroy(this.gameObject);

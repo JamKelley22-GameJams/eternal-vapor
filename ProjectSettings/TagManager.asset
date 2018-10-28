@@ -9,6 +9,8 @@ TagManager:
   - Dash
   - Wall
   - Grenade
+  - VaporTeleport
+  - Eye
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - PostProcessing
   - UIRT
   - Background
-  - 
-  - 
+  - Jumpable
+  - WallJumpable
   - 
   - 
   - 

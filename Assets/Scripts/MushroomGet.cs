@@ -9,6 +9,7 @@ public class MushroomGet : MonoBehaviour
 
     public Vector3 StartPosition;
     public SpriteRenderer spriteRenderer;
+    public AudioClip collectSound;
     public float displayTime = 5.0f;
     public string walljumpMessage;
     public string dashMessage;
@@ -42,6 +43,7 @@ public class MushroomGet : MonoBehaviour
         if (go.tag == "Player")
         {
             StartCoroutine(Manager.Instance.DoPlayerReturn(go, StartPosition));
+            AudioSource.PlayClipAtPoint(collectSound, this.transform.position);
             if (this.gameObject.tag == "Walljump")
             {
                 Manager.Instance.eye.sprite = Manager.Instance.barelyOpenEye;
@@ -74,5 +76,5 @@ public class MushroomGet : MonoBehaviour
         }
     }
 
-    
+
 }
