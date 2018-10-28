@@ -15,10 +15,8 @@ public class GameSettings : MonoBehaviour
             _instance = this;
     }
 
-    public bool SFX { get { return _SFX; } }
+    public bool SFX { get; set; } = true;
 
-    [SerializeField, Tooltip("The SFX value for the game")]
-    private GameObject _SFX;
 
     void Start()
     {
@@ -29,4 +27,6 @@ public class GameSettings : MonoBehaviour
     {
         
     }
+
+
 }

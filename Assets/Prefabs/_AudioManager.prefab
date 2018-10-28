@@ -43,4 +43,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9201f9e8d51cf4082de9e3046ed2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: SuperSynthAction
+    clip: {fileID: 0}
+    parent: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 1
+    audioType: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 0}
+    parent: {fileID: 0}
+    volume: 0.541
+    pitch: 0
+    loop: 0
+    audioType: 1
+    source: {fileID: 0}
+  - name: FootFall_L
+    clip: {fileID: 8300000, guid: 57e7c1e72a4c1ba4ba81bdc47bab87f2, type: 3}
+    parent: {fileID: 0}
+    volume: 0.267
+    pitch: 0.506
+    loop: 0
+    audioType: 1
+    source: {fileID: 0}
+  - name: FootFall_R
+    clip: {fileID: 8300000, guid: 57e7c1e72a4c1ba4ba81bdc47bab87f2, type: 3}
+    parent: {fileID: 0}
+    volume: 0.267
+    pitch: 0.719
+    loop: 0
+    audioType: 1
+    source: {fileID: 0}

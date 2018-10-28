@@ -76,6 +76,7 @@ public class AudioManager : MonoBehaviour
         if (s != null)
         {
             s.source.Play();
+            //Debug.Log("Played");
             this.playingSoundList.Add(s);
         }
         else
