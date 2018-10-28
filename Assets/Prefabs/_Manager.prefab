@@ -52,6 +52,9 @@ MonoBehaviour:
   CreditsButton:
     btn: {fileID: 0}
     selected: {fileID: 0}
+  QuitButton:
+    btn: {fileID: 0}
+    selected: {fileID: 0}
   _PlayerGameObject: {fileID: 0}
   _AudioMixerGroup: {fileID: 0}
   _barelyOpenEye: {fileID: 21300000, guid: acaf418ff7d15b34f952375df4ec6934, type: 3}

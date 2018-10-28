@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 
 /*
@@ -42,9 +43,10 @@ public class Manager : MonoBehaviour
     public Material PC_Materal { get { return _PC_Materal; } }
 
     [Header("Buttons")]
-    public _Button StartButton;
-    public _Button SettingsButton;
-    public _Button CreditsButton;
+    public ButtonWrapper StartButton;
+    public ButtonWrapper SettingsButton;
+    public ButtonWrapper CreditsButton;
+    public ButtonWrapper QuitButton;
 
     [Header("Common used vars")]
     [SerializeField, Tooltip("The Player GameObject")]
@@ -64,29 +66,62 @@ public class Manager : MonoBehaviour
     [SerializeField]
     private Material _PC_Materal;
 
+    public GameObject PauseMenuUI;
+    private bool gamePaused;
+
     void Start()
     {
         //Add onClick Listeners 
+        /*
         if(SceneManager.GetActiveScene().name == SceneNames.Title)
         {
             StartButton.btn.onClick.AddListener(delegate { GoToScene(SceneNames.Main); });
             SettingsButton.btn.onClick.AddListener(delegate { GoToScene(SceneNames.Settings); });
             CreditsButton.btn.onClick.AddListener(delegate { GoToScene(SceneNames.Credits); });
+            QuitButton.btn.onClick.AddListener(delegate { QuitGame(); });
+        }
+        */
+
+        //Debug.Log("PlayMusic");
+        AudioManager.Instance.PlayMusic("SuperSynthAction");
+        try
+        {
+            PauseMenuUI.SetActive(false);
+        }
+        catch(Exception e)
+        {
+
         }
     }
 
     void Update()
     {
         //UnityEngine.Debug.Log("Actual: " + PC_Materal.GetFloat("___AlpahClip___"));
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            gamePaused = !gamePaused;
+            if (gamePaused)
+                PauseGame();
+            else
+                ResumeGame();
+        }
     }
 
-    void GoToScene(string SceneName)
+    public void GoToScene(string SceneName)
     {
+        if(SceneName == SceneNames.Title)
+        {
+            //AudioManager.Instance.PlayMusic("SuperSynthAction");
+        }
+        else
+        {
+            AudioManager.Instance.StopOne("SuperSynthAction");
+        }
         Debug.Log(SceneName);
         SceneManager.LoadScene(SceneName);
     }
 
-    public IEnumerator DoPlayerReturn(GameObject go, Vector3 startPosition)
+    public IEnumerator DoPlayerReturn(GameObject go, Vector3 startPosition, bool restart = false)
     {
         float alphaClip = 0f;
         float disapearTime = 50;
@@ -102,6 +137,30 @@ public class Manager : MonoBehaviour
         go.transform.position = startPosition;
         go.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         PC_Materal.SetFloat("___AlpahClip___", 0f);
+        if(restart)
+        {
+            AudioManager.Instance.StopOne("SuperSynthAction");
+            AudioManager.Instance.PlayMusic("SuperSynthAction");
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void PauseGame()
+    {
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        AudioManager.Instance.ChangePitch("SuperSynthAction", .75f);
+    }
+
+    public void ResumeGame()
+    {
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        AudioManager.Instance.ChangePitch("SuperSynthAction", 1f);
     }
 
     void OnApplicationQuit()
@@ -111,7 +170,7 @@ public class Manager : MonoBehaviour
 }
 
 [System.Serializable]
-public class _Button
+public class ButtonWrapper
 {
     public Button btn;
     public GameObject selected;

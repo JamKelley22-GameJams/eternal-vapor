@@ -28,9 +28,16 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        amGroup = Manager.Instance.AudioMixerGroup;
+        try
+        {
+            amGroup = Manager.Instance.AudioMixerGroup;
+        }
+        catch(Exception e)
+        {
+
+        }
 
         //Initalize
         playingSoundList = new List<Sound>();
@@ -38,6 +45,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            // Debug.Log(s.source);
             s.source.clip = s.clip;
             if (s.parent)
                 s.source.transform.parent = s.parent.transform;//may need to go in update???
@@ -48,12 +56,34 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        
+    }
+
+    public void ChangePitch(string name, float pitch)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s != null)
+        {
+            s.source.pitch = Mathf.Clamp01(pitch);
+        }
+        else
+        {
+            Debug.LogWarning("Sound " + name + " not found");
+        }
+    }
+
     /*
 	 * Attempt to play the sound(music) from sound list
 	 */
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        //Debug.Log(s);
+        //Debug.Log(s.source);
+        //Debug.Log(s.name);
         if (s != null)
         {
             s.source.Play();

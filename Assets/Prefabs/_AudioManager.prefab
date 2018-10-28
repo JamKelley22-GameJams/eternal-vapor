@@ -45,34 +45,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: SuperSynthAction
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9811565c55f50b44cb3de2556d4f0790, type: 3}
     parent: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 1
+    volume: 0.333
+    pitch: 1
+    loop: 0
     audioType: 0
     source: {fileID: 0}
   - name: Click
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 57e7c1e72a4c1ba4ba81bdc47bab87f2, type: 3}
     parent: {fileID: 0}
     volume: 0.541
     pitch: 0
     loop: 0
     audioType: 1
     source: {fileID: 0}
-  - name: FootFall_L
+  - name: FootFallL
     clip: {fileID: 8300000, guid: 57e7c1e72a4c1ba4ba81bdc47bab87f2, type: 3}
     parent: {fileID: 0}
-    volume: 0.267
-    pitch: 0.506
+    volume: 0.05
+    pitch: 0.344
     loop: 0
     audioType: 1
     source: {fileID: 0}
-  - name: FootFall_R
+  - name: FootFallR
     clip: {fileID: 8300000, guid: 57e7c1e72a4c1ba4ba81bdc47bab87f2, type: 3}
     parent: {fileID: 0}
-    volume: 0.267
-    pitch: 0.719
+    volume: 0.05
+    pitch: 0.591
     loop: 0
     audioType: 1
     source: {fileID: 0}
