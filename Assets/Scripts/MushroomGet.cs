@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MushroomGet : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class MushroomGet : MonoBehaviour
 
     private Material pcMat;
 
+    public GameObject WinScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,25 +45,33 @@ public class MushroomGet : MonoBehaviour
         GameObject go = col.gameObject;
         if (go.tag == "Player")
         {
-            StartCoroutine(Manager.Instance.DoPlayerReturn(go, StartPosition));
+            
             AudioSource.PlayClipAtPoint(collectSound, this.transform.position);
             if (this.gameObject.tag == "Walljump")
             {
+                StartCoroutine(Manager.Instance.DoPlayerReturn(go, StartPosition));
                 Manager.Instance.eye.sprite = Manager.Instance.barelyOpenEye;
                 go.GetComponent<Movement>().canWalljump = true;
 
             }
             if (this.gameObject.tag == "Dash")
             {
+                StartCoroutine(Manager.Instance.DoPlayerReturn(go, StartPosition));
                 Manager.Instance.eye.sprite = Manager.Instance.slightlyOpenEye;
                 go.GetComponent<Movement>().canDash = true;
 
             }
-            if (this.gameObject.tag == "Grenade")
+            if (this.gameObject.tag == "VaporTeleport")
             {
+                StartCoroutine(Manager.Instance.DoPlayerReturn(go, StartPosition));
                 Manager.Instance.eye.sprite = Manager.Instance.openEye;
                 go.GetComponent<Movement>().canTeleport = true;
 
+            }
+            if (this.gameObject.tag == "Last")
+            {
+                Manager.Instance.eye.sprite = Manager.Instance.thirdEyeOpen;
+                StartCoroutine(Win());
             }
             StartCoroutine(DoPickupMushroom());
         }
@@ -76,5 +87,18 @@ public class MushroomGet : MonoBehaviour
         }
     }
 
-
+    IEnumerator Win()
+    {
+        //AudioManager.Instance.PlaySFX("Win");
+        Time.timeScale = .5f;
+        AudioManager.Instance.ChangePitch("SuperSynthAction", .5f);
+        yield return new WaitForSeconds(1f);
+        AudioManager.Instance.ChangePitch("SuperSynthAction", 1f);
+        float numSec = 10f;
+        Time.timeScale = 1f;
+        WinScreen.SetActive(true);
+        yield return new WaitForSeconds(numSec);
+        //WinScreen.SetActive(false);
+        SceneManager.LoadScene(3);
+    }
 }

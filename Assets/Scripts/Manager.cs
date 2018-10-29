@@ -109,7 +109,16 @@ public class Manager : MonoBehaviour
 
     public void GoToScene(string SceneName)
     {
-        if(SceneName == SceneNames.Title)
+        try
+        {
+            ResumeGame();
+        }
+        catch(Exception e)
+        {
+
+        }
+        
+        if (SceneName == SceneNames.Title)
         {
             //AudioManager.Instance.PlayMusic("SuperSynthAction");
         }
@@ -161,6 +170,12 @@ public class Manager : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         AudioManager.Instance.ChangePitch("SuperSynthAction", 1f);
+    }
+
+    public void ResetScene()
+    {
+        ResumeGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void OnApplicationQuit()

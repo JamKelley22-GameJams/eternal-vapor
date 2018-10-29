@@ -11,6 +11,8 @@ TagManager:
   - Grenade
   - VaporTeleport
   - Eye
+  - Last
+  - Death
   layers:
   - Default
   - TransparentFX

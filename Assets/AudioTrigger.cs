@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class AudioTrigger : MonoBehaviour
 {
 
-    public AudioClip colliderAudio;
-    AudioSource audioSource;
+    public string song;
     private Collider2D collider;
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,9 +20,7 @@ public class AudioTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
+        AudioManager.Instance.StopAll();
+        AudioManager.Instance.PlayMusic(song);
     }
 }

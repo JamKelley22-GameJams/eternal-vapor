@@ -1,0 +1,24 @@
+Assets were created using images belonging to the creators and images from Google labeled for reuse and modification.
+These images were acquired from:
+https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA00120: Moon
+https://en.wikipedia.org/wiki/File:Sun_icon.svg: Sun
+https://www.flickr.com/photos/152977080@N03/33195908290: Mt. Fuji
+https://en.wikipedia.org/wiki/File:Windows_XP_Blue_Screen_of_Death_(Forced).svg: Windows XP Error Message, Blue
+https://www.flickr.com/photos/67146024@N00/2401487025: Windows XP Error Message, Popup
+https://blog.wikimedia.org/2013/03/19/help-wikimedia-squash-software-bugs/: Bug Icon 1
+https://www.colourbox.de/bild/beispiel-fur-eine-schabe-silhouette-auf-weisem-hintergrund-bild-4832964: Bug Icon 2
+https://www.google.com/search?hl=en&biw=1536&bih=674&tbs=sur%3Afmc&tbm=isch&sa=1&ei=2yXVW-_sL9LojgTooqeoCA&q=trees&oq=trees&gs_l=img.3..0i67l2j0j0i67l5j0j0i67.10913.10913..11072...0.0..0.67.67.1......1....1..gws-wiz-img.6aF0Oa6G8mc#imgrc=RbUd3L9Y2hs8KM: Tree Silhouette 1
+https://www.google.com/search?q=non+living+things+tree&hl=en&tbs=simg:CAQSlgEJ0DgICaGlo3saigELEKjU2AQaBAgVCAEMCxCwjKcIGmEKXwgDEif8A7ACpQOxAogW4xXOFYweSNkVxyjIKOM35DfXKfwqyijYIZcppioaMHbZseZUkOe2w94JcS1FvKOxuoAFhNItNX47EnfJQmnyRCfv1BE3DGANsu6iIzOoNiAEDAsQjq7-CBoKCggIARIEYhUnuAw,sur:fmc&tbm=isch&source=lnt&sa=X&ved=0ahUKEwiMsY6pkqjeAhWM0YMKHe_mACMQpwUIIg&biw=1536&bih=674&dpr=2.5#imgrc=Php_YsyAVQ_Z9M: Tree 1
+https://commons.wikimedia.org/wiki/File:Dragons_Blood_Tree,_Socotra_Island_(10941931846).jpg: Dragons Blood Tree
+https://www.deviantart.com/cooling999/art/Windows-History-Windows-98-206927511: Windows 98 Logo
+https://pt.m.wikipedia.org/wiki/Ficheiro: Antinous Mondragone Louvre Bust
+https://pixabay.com/en/grass-lawn-green-nature-meadow-303714/: Grass 1
+https://www.google.com/search?q=clipart+images+of+grass&hl=en&tbs=simg:CAQSlwEJMCzZpCAu7TMaiwELEKjU2AQaBAgVCAQMCxCwjKcIGmIKYAgDEiiVCqAJoQm9ApYKnwn8A7EC8gbaA9433DeXKds3mCnLKLM91yGbN9k3GjD3PE5M9ZMxwqqiP9ppBj6728nzZQ0Sd8YKsuvrNIohOrBgmMF2HTO-s4YoAv-uoFsgBAwLEI6u_1ggaCgoICAESBEhBsB8M,sur:fmc&tbm=isch&source=lnt&sa=X&ved=0ahUKEwiL7YPDk6jeAhXjxYMKHed5AX0QpwUIIg&biw=767&bih=664&dpr=2.5#imgrc=2J1PN59bUUFYsM: Grass 2
+https://www.goodfreephotos.com/astrophotography/bright-stars-in-the-sky-over-the-hills.jpg.php: Starry Sky
+https://www.flickr.com/photos/theogeo/2407253800: TV Static
+https://commons.wikimedia.org/wiki/File:Sun_SparcStation_10_with_CRT.jpg: CRT Image
+https://commons.wikimedia.org/wiki/File:VHS-Video-Tape-Top-Flat.jpg: VHS Tape
+
+
+
+
